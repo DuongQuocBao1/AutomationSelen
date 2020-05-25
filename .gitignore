@@ -15,7 +15,7 @@ local.properties
 .recommenders
 .settings/
 target/
-test-ouput/
+test-output/
 
 # External tool builders
 .externalToolBuilders/
