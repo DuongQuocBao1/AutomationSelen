@@ -130,9 +130,9 @@ public class HomePage {
 //		guestUser.setMn("0123456789");
 //		guestUser.setAdd1("123 abc");
 //		guestUser.setAdd2("abc 123");
-		this.setFisrtName(strFN);
-		this.setLastName(strLN);
-		this.setEmail(strMail);
+		this.setFisrtName(uuid);
+		this.setLastName(uuid);
+		this.setEmail(mail_uuid);
 		this.setPassword(strPassw);
 		this.setMobileNumber(strMobileNb);
 		this.clickCountry();

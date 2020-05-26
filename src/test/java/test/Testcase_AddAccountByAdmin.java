@@ -63,7 +63,7 @@ public class Testcase_AddAccountByAdmin {
 		// Verify home page
 		assertTrue(driver.getTitle().contains("Guest Management"));
 		objHomePage.Add();
-		objHomePage.fillInData("Duong","Bao","baodq@gmail.com", "123456", "0123458679", "123 abc", "321 cba");//uuid,uuid,"baodq69@gmail.com", "123456", "0123458679", "123 abc", "321 cba"
+		objHomePage.fillInData(uuid,uuid,mail_uuid, "123456", "0123458679", "123 abc", "321 cba");//uuid,uuid,"baodq69@gmail.com", "123456", "0123458679", "123 abc", "321 cba"
 		// Waitting time
 		try {
 			Thread.sleep(2000);
@@ -71,7 +71,7 @@ public class Testcase_AddAccountByAdmin {
 			e.printStackTrace();
 		}		  
 		  try {
-		     driver.findElement(By.xpath("//table[@class='xcrud-list table table-striped table-hover']/tbody//td[text()='Duong']/following-sibling::td[text()='Bao']/following-sibling::td/a[text()='baodq@gmail.com']"));
+		     driver.findElement(By.xpath("//table[@class='xcrud-list table table-striped table-hover']/tbody//td[text()='"+uuid+"']/following-sibling::td[text()='"+uuid+"']/following-sibling::td/a[text()='"+mail_uuid+"']"));
 		     present = true;
 		  } catch (NoSuchElementException e) {
 		     present = false;
@@ -79,8 +79,8 @@ public class Testcase_AddAccountByAdmin {
 	}
 	@AfterTest
 	public void tearDownTest() {
-//		String a = "//table[@class='xcrud-list table table-striped table-hover']/tbody//td[text()='"+uuid+"']/following-sibling::td[text()='"+uuid+"']/following-sibling::td/a[text()='"+mail_uuid+"']";
-//		System.out.println(a);
+		String a = "//table[@class='xcrud-list table table-striped table-hover']/tbody//td[text()='"+uuid+"']/following-sibling::td[text()='"+uuid+"']/following-sibling::td/a[text()='"+mail_uuid+"']";
+		System.out.println(a);
 		// Close browser
 		driver.close();
 		System.out.println("Successfully !");
